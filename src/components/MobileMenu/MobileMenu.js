@@ -16,7 +16,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 
   return (
     <div>
-      <button onClick={onDismiss}>Dismiss menu</button>
+      <button onClick={onDismiss} autoFocus>Dismiss menu</button>
       <nav>
         <a href="/sale">Sale</a>
         <a href="/new">New&nbsp;Releases</a>

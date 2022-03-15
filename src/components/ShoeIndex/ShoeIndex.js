@@ -47,10 +47,26 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+
+  @media ${props => props.theme.queries.tabletAndDown} {
+    flex-direction: column-reverse;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+
+  @media ${props => props.theme.queries.tabletAndDown} {
+    flex: fit-content;
+    max-height: 1rem;
+    margin-bottom: -32px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media ${props => props.theme.queries.phoneAndDown} {
+    max-height: revert;
+  }
 `;
 
 const MainColumn = styled.div`
