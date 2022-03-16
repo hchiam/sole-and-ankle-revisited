@@ -17,9 +17,10 @@ const Header = () => {
 
   const menuButtonRef = useRef(null);
 
-  function focusMenuButton() {
-    menuButtonRef?.current?.focus();
-  }
+  // // NOT NEEDED IF WE import { DialogOverlay, DialogContent } from '@reach/dialog';
+  // function focusMenuButton() {
+  //   menuButtonRef?.current?.focus();
+  // }
 
   return (
     <header>
@@ -50,7 +51,8 @@ const Header = () => {
 
       <MobileMenu
         isOpen={showMobileMenu}
-        onDismiss={() => {setShowMobileMenu(false);focusMenuButton();}}
+        onDismiss={() => {setShowMobileMenu(false);}}
+        // onDismiss={() => {setShowMobileMenu(false);focusMenuButton();}}
       />
     </header>
   );
