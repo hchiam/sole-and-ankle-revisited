@@ -101,15 +101,6 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
-
-  /* &:first-of-type {
-    color: ${COLORS.secondary};
-  } */
-`;
-
-const MenuButton = styled.button`
-  /* background: transparent;
-  border: none; */
 `;
 
 export default Header;
