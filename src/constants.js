@@ -1,3 +1,6 @@
+// alternatively, we could uncomment the lines below,
+// and then import them into the CSS-in-JS in GlobalStyles.js
+
 // export const COLORS = { // replaced with CSS variables
 //   white: 'hsl(0deg 0% 100%)',
 //   gray: {
