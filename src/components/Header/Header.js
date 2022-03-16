@@ -25,6 +25,7 @@ const Header = () => {
   return (
     <header>
       <SuperHeader />
+
       <MainHeader>
         <Side>
           <Logo />
@@ -64,6 +65,8 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+  overflow-y: hidden;
 
   @media ${props => props.theme.queries.tabletAndDown} {
     gap: 0.5rem;
@@ -77,7 +80,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(48px, -48px + 10vw, 96px);
   margin: 0px 48px;
 
   @media ${props => props.theme.queries.tabletAndDown} {
@@ -93,6 +96,11 @@ const Side = styled.div`
 const RightSide = styled(Side)`
   justify-content: flex-end;
   gap: clamp(0.25rem, 10vw - 2rem, 2rem);
+  display: none;
+
+  @media ${props => props.theme.queries.tabletAndDown} {
+    display: flex;
+  }
 `;
 
 const NavLink = styled.a`
