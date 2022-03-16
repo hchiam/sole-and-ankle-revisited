@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS } from '../../constants';
-
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -30,8 +28,8 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 24px;
   font-size: 0.875rem;
-  color: ${COLORS.gray[300]};
-  background-color: ${COLORS.gray[900]};
+  color: var(--gray-300);
+  background-color: var(--gray-900);
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
@@ -47,13 +45,13 @@ const Line = styled.div`
   @media ${props => props.theme.queries.tabletAndDown} {
     display: revert;
     height: 10px;
-    background: ${COLORS.gray['900']};
+    background: var(--gray-900);
     width: 100%;
   }
 `;
 
 const MarketingMessage = styled.span`
-  color: ${COLORS.white};
+  color: var(--white);
   margin-right: auto;
 `;
 

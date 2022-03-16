@@ -2,8 +2,6 @@
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { COLORS } from '../../constants';
-
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
@@ -45,7 +43,7 @@ const Overlay = styled(DialogOverlay)`
   right: 0;
   width: 100%;
   height: 100vh;
-  background: hsla(0deg, 100%, 0%, 0.5);
+  background: hsla(var(--gray-hue), 0%, 0%, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +55,7 @@ const Content = styled(DialogContent)`
   right: 0;
   width: 50vw;
   height: 100%;
-  background: ${COLORS.white};
+  background: var(--white);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -87,7 +85,7 @@ const Content = styled(DialogContent)`
 `;
 
 const CloseButton = styled(UnstyledButton)`
-  color: ${COLORS.gray['900']};
+  color: var(--gray-900);
   position: absolute;
   right: 0rem;
   top: 0.75rem;
@@ -101,10 +99,10 @@ const Nav = styled.nav`
   gap: 1rem;
   a {
     text-decoration: none;
-    color: ${COLORS.gray['900']};
+    color: var(--gray-900);
     &:hover, &:focus {
       text-decoration: revert;
-      color: ${COLORS.secondary};
+      color: var(--secondary);
     }
   }
 `;
@@ -115,11 +113,11 @@ const Footer = styled.footer`
   gap: 0.5rem;
   a {
     text-decoration: none;
-    color: ${COLORS.gray['700']};
+    color: var(--gray-700);
     font-size: small;
     &:hover, &:focus {
       text-decoration: revert;
-      color: ${COLORS.secondary};
+      color: var(--secondary);
     }
   }
 `;
