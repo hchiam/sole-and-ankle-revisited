@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { COLORS, QUERIES } from '../../constants';
+import { COLORS } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -15,9 +14,12 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   }
 
   return (
-    <Wrapper>
+    <Overlay isOpen={isOpen} onDismiss={onDismiss}>
       <Content>
-        <Button onClick={onDismiss} autoFocus>&#x2715;</Button>
+        <CloseButton onClick={onDismiss} autoFocus>
+          <Icon id="close"/>
+          <VisuallyHidden>Dismiss menu</VisuallyHidden>
+        </CloseButton>
         <div></div>
         <Nav>
           <a href="/sale">Sale</a>
@@ -33,11 +35,11 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
           <a href="/contact">Contact Us</a>
         </Footer>
       </Content>
-    </Wrapper>
+    </Overlay>
   );
 };
 
-const Wrapper = styled(DialogOverlay)`
+const Overlay = styled(DialogOverlay)`
   position: fixed;
   top: 0;
   right: 0;
@@ -84,15 +86,12 @@ const Content = styled(DialogContent)`
   }
 `;
 
-const Button = styled.button`
-  background: transparent;
+const CloseButton = styled(UnstyledButton)`
   color: ${COLORS.gray['900']};
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  border: none;
-  font-size: x-large;
-  cursor: pointer;
+  right: 0rem;
+  top: 0.75rem;
+  padding: 1rem;
 `;
 
 const Nav = styled.nav`
