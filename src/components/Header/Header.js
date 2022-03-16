@@ -63,10 +63,8 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
   overflow-x: auto;
-  overflow-y: hidden;
 
   @media ${props => props.theme.queries.tabletAndDown} {
     gap: 0.5rem;
@@ -80,7 +78,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: clamp(48px, -48px + 10vw, 96px);
+  gap: clamp(1.25rem, 7vw - 2.5rem, 3rem);
   margin: 0px 48px;
 
   @media ${props => props.theme.queries.tabletAndDown} {
