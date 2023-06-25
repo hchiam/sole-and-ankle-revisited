@@ -1,5 +1,9 @@
 # Sole&Ankle, Revisited — Module 5 workshop
 
+(Other course projects: [sole-and-ankle](https://github.com/hchiam/sole-and-ankle) and [scrollburglars](https://github.com/hchiam/scrollburglars).)
+
+Live demo: https://sole-and-ankle-revisited.surge.sh/
+
 In the Flexbox module, we built an e-commerce store:
 
 ![A screenshot of the original Flexbox module workshop](./docs/original-desktop.png)
@@ -94,7 +98,7 @@ Here's our goal:
 As it stands, we have a few colors in our `constants.js` file. When we want to use a color, we import and interpolate it:
 
 ```jsx
-import { COLORS } from '../../constants';
+import { COLORS } from "../../constants";
 
 const Something = styled.p`
   color: ${COLORS.gray[900]};
