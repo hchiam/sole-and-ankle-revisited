@@ -1,10 +1,10 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
-import Breadcrumbs from '../Breadcrumbs';
-import Select from '../Select';
-import Spacer from '../Spacer';
-import ShoeSidebar from '../ShoeSidebar';
-import ShoeGrid from '../ShoeGrid';
+import Breadcrumbs from "../Breadcrumbs";
+import Select from "../Select";
+import Spacer from "../Spacer";
+import ShoeSidebar from "../ShoeSidebar";
+import ShoeGrid from "../ShoeGrid";
 
 const ShoeIndex = ({ sortId, setSortId }) => {
   return (
@@ -27,10 +27,13 @@ const ShoeIndex = ({ sortId, setSortId }) => {
       <LeftColumn>
         <Breadcrumbs>
           <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/">Sale</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/">Shoes</Breadcrumbs.Crumb>
+          {/* <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href="/sale/shoes">
             Shoes
-          </Breadcrumbs.Crumb>
+          </Breadcrumbs.Crumb> */}
         </Breadcrumbs>
         <Spacer size={42} />
         <ShoeSidebar />
@@ -45,7 +48,7 @@ const Wrapper = styled.div`
   align-items: baseline;
   gap: 32px;
 
-  @media ${props => props.theme.queries.tabletAndDown} {
+  @media ${(props) => props.theme.queries.tabletAndDown} {
     flex-direction: column-reverse;
   }
 `;
@@ -53,7 +56,7 @@ const Wrapper = styled.div`
 const LeftColumn = styled.div`
   flex-basis: 248px;
 
-  @media ${props => props.theme.queries.tabletAndDown} {
+  @media ${(props) => props.theme.queries.tabletAndDown} {
     flex: fit-content;
     max-height: 1rem;
     margin-bottom: -32px;
@@ -61,7 +64,7 @@ const LeftColumn = styled.div`
     flex-direction: column-reverse;
   }
 
-  @media ${props => props.theme.queries.phoneAndDown} {
+  @media ${(props) => props.theme.queries.phoneAndDown} {
     max-height: revert;
   }
 `;

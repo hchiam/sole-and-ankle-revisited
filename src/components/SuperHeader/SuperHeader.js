@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import SearchInput from '../SearchInput';
-import UnstyledButton from '../UnstyledButton';
-import Icon from '../Icon';
+import SearchInput from "../SearchInput";
+import UnstyledButton from "../UnstyledButton";
+import Icon from "../Icon";
 
 const SuperHeader = () => {
   return (
@@ -13,7 +13,8 @@ const SuperHeader = () => {
           Free shipping on domestic orders over $75!
         </MarketingMessage>
         <SearchInput />
-        <HelpLink href="/help">Help</HelpLink>
+        <HelpLink href="/">Help</HelpLink>
+        {/* <HelpLink href="/help">Help</HelpLink> */}
         <UnstyledButton>
           <Icon id="shopping-bag" strokeWidth={1} />
         </UnstyledButton>
@@ -35,14 +36,14 @@ const Wrapper = styled.div`
   padding-right: 32px;
   position: relative;
 
-  @media ${props => props.theme.queries.tabletAndDown} {
+  @media ${(props) => props.theme.queries.tabletAndDown} {
     display: none;
   }
 `;
 
 const Line = styled.div`
   display: none;
-  @media ${props => props.theme.queries.tabletAndDown} {
+  @media ${(props) => props.theme.queries.tabletAndDown} {
     display: revert;
     height: 10px;
     background: var(--gray-900);

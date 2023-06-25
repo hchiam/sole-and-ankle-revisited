@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import styled from 'styled-components/macro';
-import { DialogOverlay, DialogContent } from '@reach/dialog';
+import styled from "styled-components/macro";
+import { DialogOverlay, DialogContent } from "@reach/dialog";
 
-import UnstyledButton from '../UnstyledButton';
-import Icon from '../Icon';
-import VisuallyHidden from '../VisuallyHidden';
+import UnstyledButton from "../UnstyledButton";
+import Icon from "../Icon";
+import VisuallyHidden from "../VisuallyHidden";
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
   if (!isOpen) {
@@ -15,22 +15,31 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
     <Overlay isOpen={isOpen} onDismiss={onDismiss}>
       <Content aria-label="Menu">
         <CloseButton onClick={onDismiss} autoFocus>
-          <Icon id="close"/>
+          <Icon id="close" />
           <VisuallyHidden>Dismiss menu</VisuallyHidden>
         </CloseButton>
         <div></div>
         <Nav>
-          <a href="/sale">Sale</a>
+          <a href="/">Sale</a>
+          <a href="/">New&nbsp;Releases</a>
+          <a href="/">Men</a>
+          <a href="/">Women</a>
+          <a href="/">Kids</a>
+          <a href="/">Collections</a>
+          {/* <a href="/sale">Sale</a>
           <a href="/new">New&nbsp;Releases</a>
           <a href="/men">Men</a>
           <a href="/women">Women</a>
           <a href="/kids">Kids</a>
-          <a href="/collections">Collections</a>
+          <a href="/collections">Collections</a> */}
         </Nav>
         <Footer>
-          <a href="/terms">Terms and Conditions</a>
+          <a href="/">Terms and Conditions</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">Contact Us</a>
+          {/* <a href="/terms">Terms and Conditions</a>
           <a href="/privacy">Privacy Policy</a>
-          <a href="/contact">Contact Us</a>
+          <a href="/contact">Contact Us</a> */}
         </Footer>
       </Content>
     </Overlay>
@@ -62,15 +71,15 @@ const Content = styled(DialogContent)`
   justify-content: space-between;
   animation: slide-in forwards 0.2s 0s;
 
-  @media ${props => props.theme.queries.desktopAndDown} {
+  @media ${(props) => props.theme.queries.desktopAndDown} {
     width: 25vw;
   }
 
-  @media ${props => props.theme.queries.tabletAndDown} {
+  @media ${(props) => props.theme.queries.tabletAndDown} {
     width: 50vw;
   }
 
-  @media ${props => props.theme.queries.phoneAndDown} {
+  @media ${(props) => props.theme.queries.phoneAndDown} {
     width: 80vw;
   }
 
@@ -100,7 +109,8 @@ const Nav = styled.nav`
   a {
     text-decoration: none;
     color: var(--gray-900);
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: revert;
       color: var(--secondary);
     }
@@ -115,7 +125,8 @@ const Footer = styled.footer`
     text-decoration: none;
     color: var(--gray-700);
     font-size: small;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: revert;
       color: var(--secondary);
     }
